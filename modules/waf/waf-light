@@ -39,19 +39,15 @@ INSTALL="x"
 C1='x'
 C2='x'
 C3='x'
+WAF='waf3'
 cwd = os.getcwd()
 join = os.path.join
 
 if sys.hexversion<0x206000f:
 	raise ImportError('Python >= 2.6 is required to create the waf file')
 
-WAF='waf'
 def b(x):
-	return x
-if sys.hexversion>0x300000f:
-	WAF='waf3'
-	def b(x):
-		return x.encode()
+	return x.encode()
 
 def err(m):
 	print(('\033[91mError: %s\033[0m' % m))
@@ -165,7 +161,6 @@ wafdir = find_lib()
 sys.path.insert(0, wafdir)
 
 if __name__ == '__main__':
-	#import waflib.extras.compat15#PRELUDE
 	from waflib import Scripting
 	Scripting.waf_entry_point(cwd, VERSION, wafdir)
 
