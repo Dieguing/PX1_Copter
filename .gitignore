@@ -1,3 +1,3 @@
 build/
-Tools/ardupilotwaf/__pycache__/
+*.pyc
 .lock-waf_linux_build
