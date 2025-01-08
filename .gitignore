@@ -1,3 +1,4 @@
 build/
 *.pyc
 .lock-waf_linux_build
+tasklist.json
