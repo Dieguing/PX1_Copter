@@ -43,8 +43,8 @@ WAF='waf3'
 cwd = os.getcwd()
 join = os.path.join
 
-if sys.hexversion<0x206000f:
-	raise ImportError('Python >= 2.6 is required to create the waf file')
+if sys.hexversion<0x0300000f:
+	raise ImportError('Python >= 3.0 is required to create the waf file')
 
 def b(x):
 	return x.encode()
